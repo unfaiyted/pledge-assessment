@@ -150,15 +150,7 @@ main .containers {
     text-align: left;
 }
 
-main:after {
-    content : "";
-    position: absolute;
-    right    : 0;
-    top  : 5vh;
-    width  : 1px;
-    height   : 75%;
-    background: #d9d9d9;
-}
+
 
 
 main div {
@@ -172,14 +164,6 @@ main #pledge-count {
     font-weight: bold;
 }
 
-aside .recycle-center {
-    position: relative;
-    float: left;
-    left: -55px;
-    bottom: -17vh;
-    margin-right: -105px;
-
-}
 
 aside h3 {
     padding-top: 20px;
@@ -191,6 +175,8 @@ aside {
     height: 50vh;
     width: 50%;
 }
+
+
 
 footer {
     background-color: #ffffff;
@@ -313,6 +299,33 @@ footer {
     aside {
         width: 100%;
     }
+    aside .recycle-center {
+        position: relative;
+        float: left;
+        left: 42%;
+        bottom: 7vh;
+        margin-right: -105px;
+
+    }
+
+    main:after {
+        content : "";
+        position: absolute;
+        right    : 25vw;
+        bottom  : 1vh;
+        height   : 1px;
+        width  : 50%;
+
+        background: #b1b1b1;
+    }
+
+    .district {
+        padding-left: 25px;
+
+    }
+
+
+
 }
 
 /*// Medium devices (tablets, 768px and up)*/
@@ -329,6 +342,28 @@ footer {
     aside {
         width: 100%;
     }
+
+    aside .recycle-center {
+        position: relative;
+        float: left;
+        left: 42%;
+        bottom: 7vh;
+        margin-right: -105px;
+
+    }
+
+    main:after {
+        content : "";
+        position: absolute;
+        right    : 25vw;
+        bottom  : 1vh;
+        height   : 1px;
+        width  : 50%;
+
+        background: #b1b1b1;
+    }
+
+
 }
 
 /*// Large devices (desktops, 992px and up)*/
@@ -342,10 +377,24 @@ footer {
         width: 50%;
     }
 
-}
+    aside .recycle-center {
+        position: relative;
+        float: left;
+        left: -55px;
+        bottom: -17vh;
+        margin-right: -105px;
 
-/*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
+    }
+
+    main:after {
+        content : "";
+        position: absolute;
+        right    : 0;
+        top  : 5vh;
+        width  : 1px;
+        height   : 75%;
+        background: #b1b1b1;
+    }
 
 
 }
