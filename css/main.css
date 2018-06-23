@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400|Lora');
 
 /* HTML Tags */
 body, html {
-    background-color: #F0F0F0;
+    background-color: #4D7ABC;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -52,8 +52,7 @@ nav a {
 
 
 header {
-
-    height: 50vh;
+    min-height: 50vh;
     width: 100%;
     text-align: center;
     background-image:  url("../img/recycle-big.png");
@@ -61,7 +60,6 @@ header {
     background-repeat: no-repeat;
 
 }
-
 
 
 header h1 {
@@ -98,13 +96,16 @@ header button {
 header #wrapper {
     width: 550px;
     margin: auto;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: calc(100% - 50px);
+
 }
 
 
-header #wrapper .main {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
 
 header select {
     margin: 5px;
@@ -122,9 +123,8 @@ header select {
     font-size: 13px;
 }
 
-header select option {
-    color: #fff;
-}
+select option:not(:disabled) {color:#fff;}
+
 
 /*hide for ie*/
 header select::-ms-expand {
@@ -133,7 +133,7 @@ header select::-ms-expand {
 
 main {
     background-color: #4D7ABC;
-    height: 50vh;
+    min-height: 50vh;
     width: 50%;
     position: relative;
     box-sizing: border-box;
@@ -174,7 +174,7 @@ aside h3 {
 
 aside {
     background-color: #4C79BC;
-    height: 50vh;
+    min-height: 50vh;
     width: 50%;
 }
 
@@ -190,6 +190,8 @@ footer {
     box-shadow:         1px -3px 4px 0 rgba(0, 0, 0, 0.20);
     height: 75px;
     line-height: 75px;
+    z-index: 3;
+    margin-top: 20px;
 }
 
 
@@ -252,7 +254,12 @@ footer {
     font-size: 12px;
     font-style: italic;
     font-weight: bold;
+    font-family: 'Lora', serif;
 
+}
+
+.info-icon span {
+    margin-left: -2px;
 }
 
 

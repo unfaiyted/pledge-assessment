@@ -4,6 +4,13 @@
 "use strict";
 const leaderboard = [112, 98, 119, 126, 129, 44, 118, 125, 101, 27];
 
+
+var select = document.getElementById('select-district');
+
+select.onchange = function () {
+    select.style.color = '#fff';
+};
+
 window.onload = function () {
         console.log("Hello, USAA!");
 
@@ -13,11 +20,19 @@ window.onload = function () {
 
     function countUp() {
         let countUp = document.getElementById("pledge-count").innerText;
+
+        if(countUp.includes(",")) { countUp = countUp.replace(/,/g, ''); }
+
+        countUp = parseInt(countUp);
+
         countUp++;
-        document.getElementById("pledge-count").innerText = countUp;
+
+        document.getElementById("pledge-count").innerText = numberWithCommas(countUp);
+
+        // if(countUp > 999) { countUp = countUp.replace(/,/g, ''); }
 
         if(parseInt(countUp) >= MAX_VALUE) {
-            document.getElementById("pledge-count").innerText = MAX_VALUE;
+            document.getElementById("pledge-count").innerText = numberWithCommas(MAX_VALUE);
             window.clearInterval(countInterval);
         }
     }
@@ -62,11 +77,13 @@ window.onload = function () {
 
         for(let i = 0; i < storeMaxes.length; i++) {
             let currWidth = document.getElementById('bar_' + i ).style.width;
-            let currWidthAsInt = parseInt(currWidth.replace(/%/,""));
-            currWidthAsInt++;
+            let currWidthAsFloat = parseFloat(currWidth.replace(/%/,""));
 
-            if(currWidthAsInt < storeMaxes[i]) {
-                document.getElementById('bar_' + i ).style.width = currWidthAsInt + "%";
+            currWidthAsFloat = currWidthAsFloat + 0.15;
+
+
+            if(currWidthAsFloat < storeMaxes[i]) {
+                document.getElementById('bar_' + i ).style.width = currWidthAsFloat + "%";
                 modified = true;
             }
         }
@@ -77,7 +94,14 @@ window.onload = function () {
 
     }
 
-    leaderboardInterval = window.setInterval(recalculateWidths, 35);
+    leaderboardInterval = window.setInterval(recalculateWidths, 1);
+
+
+
+    const numberWithCommas = (x) => {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
 
 
 
