@@ -240,6 +240,21 @@ footer {
     top: 2px;
 }
 
+.info-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    right: -102%;
+    bottom: 104px;
+    color: #004B8E;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+
+}
+
 
 .checkbox input[type="checkbox"] + label::after {
     content: none;
