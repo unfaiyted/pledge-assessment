@@ -62,16 +62,6 @@ header {
 
 }
 
-header #wrapper {
-    width: 550px;
-    margin: auto;
-}
-
-
-header #wrapper .main {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
 
 
 header h1 {
@@ -105,11 +95,21 @@ header button {
 
 }
 
+header #wrapper {
+    width: 550px;
+    margin: auto;
+}
+
+
+header #wrapper .main {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 
 header select {
     margin: 5px;
     width: 150px;
-    padding: 5px 25px 5px 5px;
+    padding: 5px 25px 5px 10px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
@@ -119,11 +119,12 @@ header select {
     -moz-appearance: none;
     background: url(../img/down.png) 94% / 9% no-repeat #004B8E;
     color: #4C79BC;
-    font-size: 14px;
-
+    font-size: 13px;
 }
 
-
+header select option {
+    color: #fff;
+}
 
 /*hide for ie*/
 header select::-ms-expand {
@@ -145,18 +146,18 @@ main {
     padding-right: 50px;
 }
 
+#wrapper .main p {
+    font-size: 3vh;
+}
+
 main .containers {
     width: 400px;
     text-align: left;
 }
 
-
-
-
 main div {
     font-size: 4vh;
 }
-
 
 main #pledge-count {
     font-size: 15vh;
@@ -286,6 +287,42 @@ footer {
 }
 
 
+@media (max-width: 550px) {
+
+    main {
+        padding-left: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    main .containers {
+        text-align: center;
+    }
+
+    header #wrapper {
+        width: 100%;
+        margin: auto;
+    }
+
+
+    header #wrapper .main {
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+
+    .checkbox {
+        padding: 10px;
+    }
+
+    aside h3 {
+        padding-top: 56px;
+        margin-left: 105px;
+    }
+
+
+}
+
+
 /*// Small devices*/
 @media (max-width: 767.98px) {
     main {
@@ -319,12 +356,35 @@ footer {
         background: #b1b1b1;
     }
 
+    main p {
+      margin:0px;
+    }
+
     .district {
         padding-left: 25px;
 
     }
 
+    aside .recycle-center {
 
+        left: 38%;
+
+    }
+
+    header button {
+        padding: 10px;
+        border: 0;
+        width: 125px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background: #ffffff;
+        color: #004B8E;
+        text-transform: uppercase;
+        font-weight: bold;
+
+    }
+    
 
 }
 
@@ -364,6 +424,9 @@ footer {
     }
 
 
+
+
+
 }
 
 /*// Large devices (desktops, 992px and up)*/
@@ -395,6 +458,22 @@ footer {
         height   : 75%;
         background: #b1b1b1;
     }
+
+    header button {
+        padding: 10px;
+        border: 0;
+        width: 125px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background: #ffffff;
+        color: #004B8E;
+        text-transform: uppercase;
+        font-weight: bold;
+
+    }
+
+
 
 
 }
